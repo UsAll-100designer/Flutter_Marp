@@ -51,6 +51,7 @@ h1{ color:#fff}
 ### Kick Off Meeting
 
 <br> Implement Any UI in Flutter
+<br>
 
 <style scoped>
 h1 {
@@ -75,7 +76,7 @@ span{
 ---
 
 <style scoped>
-    h1{font-family:'Noto Serif KR';}
+    h1{font-family: 'Poppins', sans-serif;}
     section{ color:#00AA8B;}
 </style>
 
@@ -83,16 +84,18 @@ span{
 
 - UI Base Theme
 
-- Layout
+- Flutter UI
 
-- Style-Guide
+- Layout Axis
+
+- Style Guide
 
 ![bg right](./img/anyuicover.png)
 
 ---
 
 <style scoped>
-    h1{font-family:'Noto Serif KR';}
+   h1{font-family: 'Poppins', sans-serif;}
     h1 {
     padding-bottom: 0em;
     color:#00AA8B;
@@ -116,257 +119,353 @@ span{
 ---
 
 <style scoped>
-    h1{font-family:'Noto Serif KR';}
+    h1{font-family: 'Poppins', sans-serif;}
     h1 {
     padding-bottom: 0.5em;
     color:#00AA8B;
 }
 </style>
 
-# 섬세함 - Delicacy
+# Flutter UI
 
-### 3가지 요소
+- MaterialApp **OR** CupertinoApp
 
-- 콘텐츠
+- Scaffold
 
-- 연결
+- AppBar
 
-- 공간경험
+- Theme
 
-![bg left](./img/delicacy.jpeg)
-
----
+![bg right](./img/file_tree.png)
 
 ---
 
-<style scoped>
-    h1{font-family:'Noto Serif KR';}
-    h1 {
-    padding-bottom: 1em;
-    color:#00AA8B;
+# MaterialApp OR CupertinoApp
+
+```dart
+void main() { // 앱 진입점
+  WidgetsFlutterBinding.ensureInitialized();
+  AppSettings settings = AppSettings();
+
+  // Don't allow landscape mode
+  SystemChrome.setPreferredOrientations(
+          [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown])
+      .then((_) => runApp(MyApp(settings: settings)));
 }
-</style>
 
-# Long Black
+class MyApp extends StatelessWidget {
+  final AppSettings settings;
 
-> 생소한 이름 롱블랙, 커피에 관심을 가진 사람에게
-> **어느 정도 귀에 익숙한 커피의 한 종류** > _익숙한 아메리카노와 차이는_
-> 물과 에스프레소중 어느 것이 잔에 먼저 들어가냐...
->
-> 즉 섬세한 취향의 소유자를 위한 미디어라는 의미
+  const MyApp({Key key, this.settings}) : super(key: key);
 
-![Alt text](./img/longblackVSamericano.png)
-
----
-
-<style scoped>
-    h1{font-family:'Noto Serif KR';}
-    h1 {
-    padding-bottom: 0.5em;
-    color:#00AA8B;
+  @override
+  Widget build(BuildContext context) {
+    //...
+    return MaterialApp( // --- (1)
+      title: 'Weather App',
+      debugShowCheckedModeBanner: false, // --- (2)
+      theme: theme, // --- (3)
+      home: PageContainer(settings: settings), // --- (4)
+    );
+  }
 }
-</style>
-
-# 대담함 - Brave
-
-### 남들과 다른 한 끗
-
-- 시간의 강제성 [24H]
-
-- 지금 읽지 않으면 읽을 수 없다.
-
-- 밀도있는 인사이트 컨텐츠 한개
-
-- 쌓이지 않도록 습관을 도운다.
-
-![bg right](./img/bold.jpeg)
-
----
+```
 
 <style scoped>
-    h1{font-family:'Noto Serif KR';}
-    h1 {
-    padding-bottom: 0.5em;
-    color:#00AA8B;
+    h1{font-family: 'Poppins', sans-serif;}
+    
+section{
+    color:#555;
+    font-size:1em;
 }
-</style>
-
-# 섬세함 - Delicacy
-
-### 3가지 요소
-
-- 콘텐츠
-
-- 연결
-
-- 공간경험
-
-![bg left](./img/delicacy.jpeg)
-
----
-
-<style scoped>
-    h1{font-family:'Noto Serif KR';}
-    h1 {
-    padding-bottom: 0.5em;
-    color:#00D063;
-}
-</style>
-
-# 콘텐츠 - Contents
-
-- 밀도있는 콘텐츠
-
-- 서비스의 본질을 잃지 않는 것
-
-- 포장은 본질이후, 고민하는 것
-
-![bg right](./img/longblack02.png)
-
----
-
-<style scoped>
-    h1{font-family:'Noto Serif KR';}
-    h1 {
-    padding-bottom: 0.5em;
-    color:#00D063;
-}
-</style>
-
-# 연결 - Connect
-
-- [online] 롱블랙 Slack 커뮤니티
-
-- [offline] 롱블랙 커피챗
-
-![bg left](./img/coffeeChat.jpeg)
-
----
-
-<style scoped>
-    h1{font-family:'Noto Serif KR';}
-    h1 {
-    padding-bottom: 0.5em;
-     color:#00D063;
-}
-</style>
-
-# 공간 경험 - Experience
-
-- 검색하는 순간
-
-- 마주하는 순간
-
-- 머무는 순간
-
-![bg right](./img/longblack03.png)
-
----
-
-<style scoped>
-    h1{font-family:'Noto Serif KR';}
-    h1 {
-    padding-bottom: 0.5em;
-     color:#00D063;
-}
-h2{color:#00A192}
-</style>
-
-## 강제성
-
-24시간 후에 사라지는 콘텐츠
-'제한적인 서비스'로 통한 미루지 않는
-자연스러운 데드라인 효과(Deadline effect)적인
-습관 조정
-
-![bg left](./img/screenshot01.png)
-
----
-
-# 1년 만에 월간활성사용자(MAU) 13만명
-
-> 역발상 전략으로 강제성을 부여한 구독서비스의 성공
->
-> -- 2021년 9월 론칭
-
-<style scoped>
 h1 {
-    padding-bottom: 1.5em;
+    padding-bottom: 0em;
+    color:#00AA8B;
+    font-size:2em;
 }
 </style>
 
 ---
 
+# Scaffold
+
+```dart
+const Scaffold({
+	Key key,
+	this.appBar,
+	this.body,
+	this.floatingActionButton,
+	this.floatingActionButtonLocation,
+	this.floatingActionButtonAnimator,
+	this.persistentFooterButtons,
+	this.drawer,
+	this.endDrawer,
+	this.bottomNavigationBar,
+	this.bottomSheet,
+	this.backgroundColor,
+	this.resizeToAvoidBottomPadding = true,
+	this.primary = true,
+}) : assert(primary != null), super(key: key);
+```
+
 <style scoped>
-    h1{font-family:'Noto Serif KR';}
-    h1 {
-    padding-bottom: 0.5em;
-     color:#00D063;
+    h1{font-family: 'Poppins', sans-serif;}
+    
+section{
+    color:#555;
+    font-size:1em;
 }
-h2{color:#00A192}
-</style>
-
-## 일관성
-
-커피라는 컨셉의 일관성을 위해
-혜택은 스탬프로
-별점은 커피콩으로 표현해서
-브랜드 아이덴티티를 유지한다.
-모든 경험을 커피로 공감을 형성
-
-![bg right](./img/screenshot0303.png)
-
----
-
-# Growth Hacking
-
-> 성장을 뜻하는 Growth와 Hacking이 결합된 단어로 고객의 반응에 따라 제품 및 서비스를
-> 수정해 제품과 시장의 궁합(PMF) 높이는 것을 의미함.
-> 조금더 간단히 말하자면 개발과정에 걸쳐 마케팅 아이디어를 제품에 녹여내는 전략
->
-> -- 출처 : 위키피디아
-
-<style scoped>
 h1 {
-    padding-bottom: 1.5em;
+    padding-bottom: 0em;
+    color:#00AA8B;
+    font-size:2em;
 }
 </style>
 
 ---
 
+# AppBar
+
+```Dart
+return Scaffold(
+      appBar: PreferredSize( //---(1)
+        preferredSize: Size.fromHeight(ui.appBarHeight(context)),// --- (2)
+        child: TransitionAppbar(...) // ---(3)
+				),
+      );
+```
+
 <style scoped>
-    h1{font-family:'Noto Serif KR';}
-    h1 {
-    padding-bottom: 0.5em;
-     color:#00D063;
+    h1{font-family: 'Poppins', sans-serif;}
+    
+section{
+    color:#555;
+    font-size:1em;
 }
-h2{color:#00A192}
-</style>
-
-## 24H 링크 공유
-
-무료 링크 (24H) →
-Growthhacking →
-고객이 세일즈맨이 됨
-
-무료 링크에서 15% 읽으면
-광고 팝업이 나옴 →
-플랫폼 광고를 연결해서 홍보 비용 줄임
-
-![bg right](./img/screenshot10.png)
-
----
-
-# UX UI 톺아보기
-
-> 사용자 전체적 경험 설계를 하는 일
-> UX = 행동 / UI = 표현
-
-<style scoped>
 h1 {
-    padding-bottom: 1.5em;
+    padding-bottom: 0em;
+    color:#00AA8B;
+    font-size:2em;
 }
 </style>
+
+---
+
+# Theme
+
+```dart
+final theme = ThemeData(
+    fontFamily: "Cabin",
+    primaryColor: AppColor.midnightSky, // --- (1)
+    accentColor: AppColor.midnightCloud,
+    primaryTextTheme: Theme.of(context).textTheme.apply( // --- (2)
+          bodyColor: AppColor.textColorDark,
+          displayColor: AppColor.textColorDark,
+        ),
+    textTheme: Theme.of(context).textTheme.apply(
+          bodyColor: AppColor.textColorDark,
+          displayColor: AppColor.textColorDark,
+        ),
+  );
+```
+
+<style scoped>
+    h1{font-family: 'Poppins', sans-serif;}
+    
+section{
+    color:#555;
+    font-size:1em;
+}
+h1 {
+    padding-bottom: 0em;
+    color:#00AA8B;
+    font-size:2em;
+}
+</style>
+
+---
+
+<style scoped>
+    h1{font-family: 'Poppins', sans-serif;}
+    h1 {
+    padding-bottom: 0.5em;
+    color:#00AA8B;
+}
+</style>
+
+# Layout Axis
+
+- Column
+
+  - MainAxis
+  - CrossAxis
+
+- Row
+
+  - MainAxis
+  - CrossAxis
+
+![bg right](./img/layout.png)
+
+---
+
+# Column
+
+```dart
+Column(
+  mainAxisAlignment: MainAxisAlignment.center,
+  mainAxisSize: MainAxisSize.max,
+  crossAxisAlignment: CrossAxisAlignment.center,
+  children: [
+    Container(
+      padding: const EdgeInsets.all(0.0),
+      color: Colors.cyanAccent,
+      width: 80.0,
+      height: 80.0,
+    ),
+    Container(
+      padding: const EdgeInsets.all(0.0),
+      color: Colors.blueAccent,
+      width: 80.0,
+      height: 80.0,
+    ),
+    Container(
+      padding: const EdgeInsets.all(0.0),
+      color: Colors.orangeAccent,
+      width: 80.0,
+      height: 80.0,
+    ),
+  ],
+  ),
+```
+
+![bg left](./img/column.png)
+
+<style scoped>
+    h1{font-family: 'Poppins', sans-serif;}
+    
+section{
+    color:#555;
+    font-size:1em;
+}
+h1 {
+    padding-bottom: 0em;
+    color:#00AA8B;
+    font-size:2em;
+}
+</style>
+
+---
+
+# Row
+
+```dart
+Row(
+  mainAxisAlignment: MainAxisAlignment.center,
+  mainAxisSize: MainAxisSize.max,
+  crossAxisAlignment: CrossAxisAlignment.center,
+  children: [
+  Container(
+    padding: const EdgeInsets.all(0.0),
+    color: Colors.cyanAccent,
+    width: 80.0,
+    height: 80.0,
+  ),
+  Container(
+    padding: const EdgeInsets.all(0.0),
+    color: Colors.blueAccent,
+    width: 80.0,
+    height: 80.0,
+  ),
+  Container(
+    padding: const EdgeInsets.all(0.0),
+    color: Colors.orangeAccent,
+    width: 80.0,
+    height: 80.0,
+  ),
+  ],
+),
+```
+
+![bg left](./img/row.png)
+
+<style scoped>
+    h1{font-family: 'Poppins', sans-serif;}
+    
+section{
+    color:#555;
+    font-size:1em;
+}
+h1 {
+    padding-bottom: 0em;
+    color:#00AA8B;
+    font-size:2em;
+}
+</style>
+
+---
+
+# Flex css
+
+```css
+.container {
+  justify-content: flex-start;
+  /* justify-content: flex-end; */
+  /* justify-content: center; */
+  /* justify-content: space-between; */
+  /* justify-content: space-around; */
+  /* justify-content: space-evenly; */
+}
+
+.container {
+  flex-wrap: wrap;
+  align-content: stretch;
+  /* align-content: flex-start; */
+  /* align-content: flex-end; */
+  /* align-content: center; */
+  /* align-content: space-between; */
+  /* align-content: space-around; */
+  /* align-content: space-evenly; */
+}
+```
+
+![bg right](./img/flex.png)
+
+<style scoped>
+    h1{font-family: 'Poppins', sans-serif;}
+    
+section{
+    color:#555;
+    font-size:1em;
+}
+h1 {
+    padding-bottom: 0em;
+    color:#00AA8B;
+    font-size:2em;
+}
+</style>
+
+---
+
+<style scoped>
+   h1{font-family: 'Poppins', sans-serif;}
+    h1 {
+    padding-bottom: 0em;
+    color:#00AA8B;
+}
+</style>
+
+# Style Guide
+
+### AS-IS &nbsp; [🔗](https://xd.adobe.com/view/92809efa-41b4-4b15-99f0-936a2fdf9ac3-c7d3/screen/dd8fd952-9869-4e2d-a40b-254e27590be7)
+
+### Prototype &nbsp; [🔗](https://xd.adobe.com/view/f675a98e-3c67-428f-ad17-7cf3419fee0b-a326/)
+
+### TO-BE &nbsp; [🔗](https://xd.adobe.com/view/4c0da597-b93c-4f85-b7ad-60358d618150-195e/)
+
+- Notion &nbsp; [🔗](https://www.notion.so/koolbaek/Flutter-1259ac2c0a074f9782c2635c0c04e961?pvs=4)
+
+![bg right](./img/materialDesign.jpeg)
 
 ---
 
@@ -379,82 +478,9 @@ h1 {
 h2{color:#00A192}
 </style>
 
-![bg](./img/screenshot02.png)
+## 추가 논의 예정
 
----
-
-<style scoped>
-    h1{font-family:'Noto Serif KR';}
-    h1 {
-    padding-bottom: 0.5em;
-     color:#00D063;
-}
-h2{color:#00A192}
-</style>
-
-![bg](./img/screenshot03.png)
-
----
-
-<style scoped>
-    h1{font-family:'Noto Serif KR';}
-    h1 {
-    padding-bottom: 0.5em;
-     color:#00D063;
-}
-h2{color:#00A192}
-</style>
-
-![bg](./img/screenshot04.png)
-
----
-
-<style scoped>
-    h1{font-family:'Noto Serif KR';}
-    h1 {
-    padding-bottom: 0.5em;
-     color:#00D063;
-}
-h2{color:#00A192}
-</style>
-
-![bg](./img/screenshot05.png)
-
----
-
-<style scoped>
-    h1{font-family:'Noto Serif KR';}
-    h1 {
-    padding-bottom: 0.5em;
-     color:#00D063;
-}
-h2{color:#00A192}
-</style>
-
-![bg](./img/screenshot06.png)
-
----
-
-<style scoped>
-    h1{font-family:'Noto Serif KR';}
-    h1 {
-    padding-bottom: 0.5em;
-     color:#00D063;
-}
-h2{color:#00A192}
-</style>
-
-![bg](./img/screenshot07.png)
-
----
-
-<style scoped>
-    h1{font-family:'Noto Serif KR';}
-    h1 {
-    padding-bottom: 0.5em;
-     color:#00D063;
-}
-h2{color:#00A192}
-</style>
-
-![bg](./img/US-Design.png)
+- mov Icon [🔗](<https://www.imagetoday.co.kr/xsearch/preview/?s_menu=membership&mode=search&search=(ta0123t00025*%20%EC%B1%97%EB%B4%87)%2C%20(ta0123t00026*%20%EC%B1%97%EB%B4%87)&multi_offer=6%7C&offer_type=6%7C&pre_offer_type=6%7C&s_menu=membership&view_type=total&search_type=single&parent_arr=0&theme_year=0&theme_month=0&search_box=&rank_by=&rank_mode=balanced&textspace_membership=&adult=N&substitute=N&scroll=&file_ext=&shape=&media_type=&bm=prmov_footage&resolution=all&ae_version=all&sampling=N&page=1&perpage=10&totalpage=&theme_seq=&img_offer_type=&total_count=12&SearchFilter=ServiceDate:[*%20TO%202023-02-21T15:00:00Z],InsertDate:[*%20TO%202023-02-21T16:30:00Z],ApprovalStatus:1,!(__%EB%AF%BC%EA%B0%90%ED%95%9C%EC%BD%98%ED%85%90%EC%B8%A0),{!tag=ot}OfferType:(6)&scroll=0&img_code=ta0123t000264&img_seq=7095813&img_idx=4&sort=3&theme_seq=&search=(ta0123t00025*%20%EC%B1%97%EB%B4%87)%2C%20(ta0123t00026*%20%EC%B1%97%EB%B4%87)&cmd=search>)
+- interaction [🔗](https://codepen.io/iamevg/pen/JXpEYz)
+- Splash [🔗](https://codepen.io/winkerVSbecks/pen/oLmqQo)
+- Web Font & image font -> Web Font
