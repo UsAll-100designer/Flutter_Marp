@@ -1,8 +1,8 @@
 ---
 marp: true
-title: DDC23
+title: Flutter_Kick Off
 footer: byline 100D
-header: DDC.23
+header: Flutter_Kick Off
 paginate: true
 # size: 4K
 ---
@@ -46,13 +46,11 @@ h1{ color:#fff}
 
 <!-- 여기는 제목 -->
 
-# DDC 2023
+# Flutter
 
-[Design Day] 23.01.29 [Tstory](https://100designer.tistory.com/6)
+### Kick Off Meeting
 
-### 김리연 [롱블랙]
-
-대담함과 섬세함, 롱블랙이<br> 경험을 설계하는 법
+<br> Implement Any UI in Flutter
 
 <style scoped>
 h1 {
@@ -81,17 +79,63 @@ span{
     section{ color:#00AA8B;}
 </style>
 
-# 프로덕트 메이킹 스토리
+# How to Implement Any UI in Flutter
 
-- 대담함
+- UI Base Theme
 
-- 섬세함
+- Layout
 
-- 그리고 콘텐츠
+- Style-Guide
 
-- 톺아보기
+![bg right](./img/anyuicover.png)
 
-![bg right](./img/longblack.png)
+---
+
+<style scoped>
+    h1{font-family:'Noto Serif KR';}
+    h1 {
+    padding-bottom: 0em;
+    color:#00AA8B;
+}
+</style>
+
+# UI Base Theme
+
+### M3 &nbsp; [🔗](https://100designer.tistory.com/6)
+
+- 디지털 경험을 만드는 도구를 결합한 통합 시스템
+
+- 구글의 플랫디자인 기반 디자인
+
+- Components [🔗](https://m3.material.io/components/cards/overview)
+
+- Implement in Flutter [🔗](https://api.flutter.dev/flutter/material/Card-class.html)
+
+![bg right](./img/materialDesign.jpeg)
+
+---
+
+<style scoped>
+    h1{font-family:'Noto Serif KR';}
+    h1 {
+    padding-bottom: 0.5em;
+    color:#00AA8B;
+}
+</style>
+
+# 섬세함 - Delicacy
+
+### 3가지 요소
+
+- 콘텐츠
+
+- 연결
+
+- 공간경험
+
+![bg left](./img/delicacy.jpeg)
+
+---
 
 ---
 
