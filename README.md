@@ -104,7 +104,7 @@ span{
 
 # UI Base Theme
 
-### M3 &nbsp; [🔗](https://100designer.tistory.com/6)
+### M3 &nbsp; [🔗](https://m3.material.io/)
 
 - 디지털 경험을 만드는 도구를 결합한 통합 시스템
 
@@ -457,13 +457,13 @@ h1 {
 
 # Style Guide
 
-### AS-IS &nbsp; [🔗](https://xd.adobe.com/view/92809efa-41b4-4b15-99f0-936a2fdf9ac3-c7d3/screen/dd8fd952-9869-4e2d-a40b-254e27590be7)
+<!-- ### AS-IS &nbsp; [🔗](https://xd.adobe.com/view/92809efa-41b4-4b15-99f0-936a2fdf9ac3-c7d3/screen/dd8fd952-9869-4e2d-a40b-254e27590be7) -->
 
-### Prototype &nbsp; [🔗](https://xd.adobe.com/view/f675a98e-3c67-428f-ad17-7cf3419fee0b-a326/)
+<!-- ### Prototype &nbsp; [🔗](https://xd.adobe.com/view/f675a98e-3c67-428f-ad17-7cf3419fee0b-a326/) -->
 
-### TO-BE &nbsp; [🔗](https://xd.adobe.com/view/4c0da597-b93c-4f85-b7ad-60358d618150-195e/)
+<!-- ### TO-BE &nbsp; [🔗](https://xd.adobe.com/view/4c0da597-b93c-4f85-b7ad-60358d618150-195e/) -->
 
-- Notion &nbsp; [🔗](https://www.notion.so/koolbaek/Flutter-1259ac2c0a074f9782c2635c0c04e961?pvs=4)
+<!-- - Notion &nbsp; [🔗](https://www.notion.so/koolbaek/Flutter-1259ac2c0a074f9782c2635c0c04e961?pvs=4) -->
 
 ![bg right](./img/materialDesign.jpeg)
 
@@ -483,4 +483,5 @@ h2{color:#00A192}
 - mov Icon [🔗](<https://www.imagetoday.co.kr/xsearch/preview/?s_menu=membership&mode=search&search=(ta0123t00025*%20%EC%B1%97%EB%B4%87)%2C%20(ta0123t00026*%20%EC%B1%97%EB%B4%87)&multi_offer=6%7C&offer_type=6%7C&pre_offer_type=6%7C&s_menu=membership&view_type=total&search_type=single&parent_arr=0&theme_year=0&theme_month=0&search_box=&rank_by=&rank_mode=balanced&textspace_membership=&adult=N&substitute=N&scroll=&file_ext=&shape=&media_type=&bm=prmov_footage&resolution=all&ae_version=all&sampling=N&page=1&perpage=10&totalpage=&theme_seq=&img_offer_type=&total_count=12&SearchFilter=ServiceDate:[*%20TO%202023-02-21T15:00:00Z],InsertDate:[*%20TO%202023-02-21T16:30:00Z],ApprovalStatus:1,!(__%EB%AF%BC%EA%B0%90%ED%95%9C%EC%BD%98%ED%85%90%EC%B8%A0),{!tag=ot}OfferType:(6)&scroll=0&img_code=ta0123t000264&img_seq=7095813&img_idx=4&sort=3&theme_seq=&search=(ta0123t00025*%20%EC%B1%97%EB%B4%87)%2C%20(ta0123t00026*%20%EC%B1%97%EB%B4%87)&cmd=search>)
 - interaction [🔗](https://codepen.io/iamevg/pen/JXpEYz)
 - Splash [🔗](https://codepen.io/winkerVSbecks/pen/oLmqQo)
-- Web Font & image font -> Web Font
+- Web Font & image font -> Web Font [🔗](https://www.sandollcloud.com/webfont)
+- API 관련 예)Textview [🔗](https://developer.android.com/guide/topics/ui/look-and-feel/autosizing-textview?hl=ko)
